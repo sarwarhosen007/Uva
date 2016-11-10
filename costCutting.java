@@ -4,7 +4,7 @@ import java.lang.*;
 import java.io.*;
 
 
-class costCutting
+class Main
 {
 	public static void main (String[] args)  
 	{

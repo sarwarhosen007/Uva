@@ -3,7 +3,7 @@ import java.lang.*;
 import java.io.*;
 
 
-class oddSum
+class Main
 {
 	public static void main (String[] args)  
 	{

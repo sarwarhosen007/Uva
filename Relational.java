@@ -4,7 +4,7 @@ import java.lang.*;
 import java.io.*;
 
 
-class Relational
+class Main
 {
 	public static void main (String[] args)  
 	{

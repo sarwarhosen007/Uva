@@ -12,7 +12,7 @@ class Cryptography
 		  int n = sc.nextInt();
 		  int p = sc.nextInt();
 		  int result =  (int)Math.pow(p,1.0/n); 
-		  System.out.println(result);
+		   
 	  }
 	 
 	 
