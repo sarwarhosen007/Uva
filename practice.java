@@ -3,56 +3,51 @@ import java.lang.*;
 import java.io.*;
 
 
-class practice
+class radio 
 {
 	public static void main (String[] args)  
 	{
       Scanner sc=new Scanner(System.in);
-	  while(sc.hasNext()){
-		  long f = sc.nextLong();
-		  long l = sc.nextLong();
-		  int c = 1;
-		   
-		   
-		  if(f==l){
-			  long s1 = f;
-			 while(s1 != 1){
-			   if(s1 % 2 ==0){
-				   s1 = s1/2;
-				   c++;
+         long n = sc.nextLong();
+		 int k = sc.nextInt();
+		 
+		 long[] arr = new long[100000];
+		 long[] arrS = new long[100000];
 
-			   }else{
-				   s1 = 3*s1 + 1;
-				   c++;
-			   }
-		    }
-			System.out.println(f + " " + l + " " + c);		   
-		  }else{
-			    long temp = f;
-				int a = 1,t = 0;
-                while(f != l){
-					long ft = f;
-					while(ft != 1){
-						if(ft % 2 == 0){
-						ft= ft/2;
-						a++;
-						}else{
-							ft = 3*ft + 1;
-							a++;
-						}
-					}
-					System.out.println(a);
-				 f++;
-				}
-				/* if(t<a){
-					t = c;
-				} */
-				//System.out.println(temp + " " + l + " " + a);
-		    }
- 
-	  
-        }
+		 for(int i = 0; i<n; i++){
+			 arr[i] = sc.nextLong();
+		 }
+		 
+		long min = arr[0];
+        for(int i= 0; i<n; i++){
+			 if(arr[i] < min){
+				 min = arr[i];
+			 }
+ 		}      
+        long max = arrS[0];
+        for(int i= 0; i<n; i++){
+			 if(arr[i] > max){
+				 max = arr[i];
+			 }
+ 		}
+		int c = 0;
+       for(long i = min; i<=max; i++){
+		   c++;
+	   }	 
+       int t = 1,temp = 0;
 	   
-	 
+	   int q = (2*k) + 1;
+   	   while(t > 0){
+		   if(c > q){
+			   temp++;
+			   c = c - q;
+		   }else{
+			   temp++;
+			   break;
+		   }
+		   t++;
+	   }
+	  System.out.print(temp); 
+  
 	}
 }
